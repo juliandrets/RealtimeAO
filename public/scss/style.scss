@@ -1,0 +1,359 @@
+body {
+  font-family: 'Roboto';
+  background-color: #222;
+  background-image: url("../img/backgrounds/1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: white;
+}
+
+// Inventary Item
+hr {
+  height: 1px;
+  border: none;
+  background-color: white;
+  opacity: .2;
+  width: 100%;
+}
+.data-item {
+  font-size: 12px !important;
+  min-width: 150px;
+
+  li {
+    height: 20px;
+    vertical-align: top;
+    position: relative;
+
+    p {
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      margin-left: 5px;
+    }
+    img {
+      height: 20px;
+      display: inline-block;
+    }
+  }
+
+}
+// Inventary Item END
+
+// View PJ
+.viewPJ {
+  position: relative;
+
+  .head {
+    position: relative;
+    z-index: 10;
+
+    .helmethover {
+      position: absolute;
+      margin-left: -28px;
+    }
+
+    .helmethover:hover {
+      filter: brightness(2);
+    }
+  }
+  .body {
+    position: relative;
+    margin: 0 auto;
+    margin-top: -8px;
+    z-index: 9;
+    width: 42px;
+    height: 81px;
+    text-align: center;
+
+    img:hover {
+      filter: brightness(2);
+    }
+
+    .weapon {
+      position: absolute;
+      bottom: -2px;
+      left: -9px;
+    }
+    .shield {
+      position: absolute;
+      bottom: 20px;
+      right: -9px;
+    }
+  }
+
+  .name {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+
+    small {
+      font-size: 13px;
+    }
+  }
+
+  .stats {
+    margin: 10px 20px 0px 20px;
+
+    ul {
+      li {
+        display: inline-block;
+        background-color: rgba(0,0,0,0.4);
+        padding: 5px 10px 5px 10px;
+        box-sizing: border-box;
+        border-radius: 20px;
+
+        img, p {
+          display: inline-block;
+          height: 20px;
+          font-size: 14px;
+          vertical-align: middle;
+        }
+        p {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  #items-view-pj {
+    .item {
+      width: 30px;
+      height: 30px;
+      background-color: rgba(0,0,0,0.9);
+      position: absolute;
+    }
+    .item:hover {
+      filter: brightness(1.7);
+    }
+    // items
+    .weapon {
+      left:41px;
+      top: 88px;
+    }
+    .armor {
+      left:41px;
+      top: 11px;
+    }
+    .helmet {
+      right:32px;
+      top: 11px;
+    }
+    .shield {
+      right:32px;
+      top: 79px;
+    }
+    .tooltip-item {
+      display: none;
+    }
+  }
+}
+// view PJ END
+
+
+#generalContent {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  #headerPJ {
+    width: 100%;
+    margin-top: 100px;
+    background-color: rgba(0,0,0,.8);
+    height: 90px;
+
+    #datosPJ {
+      #level {
+        float: left;
+        background-color: #1b4b72;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+        margin: 10px;
+        font-size: 30px;
+      }
+      #data {
+        float: left;
+        height: 70px;
+        margin: 10px;
+        max-width: 350px;
+
+        .nombrePJ {
+          font-size: 25px;
+          img {
+            height: 23px;
+          }
+        }
+        .dataPJ {
+          font-size: 13px;
+          margin: 5px 0px 5px 0px;
+        }
+        .levelbar {
+          background-color: #2a9055;
+          width: 100%;
+          height: 20px;
+          border-radius: 5px;
+          text-align: center;
+          line-height: 20px;
+          font-size: 13px;
+        }
+      }
+      #stats {
+        float: left;
+        height: 70px;
+        margin: 10px;
+        border-left: 1px solid rgba(255,255,255,0.2);
+
+        ul {
+          margin-left: 10px;
+
+          li {
+            position: relative;
+            img {
+              display: inline-block;
+              height: 20px;
+              width: 20px;
+            }
+            p {
+              display: inline-block;
+              font-size: 14px;
+            }
+            .healthBar, .manaBar, .energyBar {
+              display: inline-block;
+              width: 150px;
+              height: 15px;
+              top: 4px;
+              position: relative;
+              margin-left: 6px;
+              text-align: center;
+              font-size: 14px;
+              font-weight: 800;
+              box-sizing: border-box;
+              border-radius: 10px;
+              background-color: black;
+
+              .bar {
+                max-width: 100%;
+                height: 14px;
+                position: absolute;
+                top: 0px;
+                border-radius: 10px;
+                z-index: 99;
+              }
+
+              span {
+                position: relative;
+                z-index: 999;
+                line-height: 15px;
+                -webkit-text-stroke-color: black;
+                -webkit-text-stroke-width: 1px;
+              }
+            }
+            .healthBar{border:1px solid red}
+            .manaBar{border:1px solid blue}
+            .energyBar{border:1px solid yellow}
+
+            .health {background-color: red}
+            .mana {background: dodgerblue}
+            .stamina {background-color: yellow}
+          }
+        }
+      }
+    }
+  }
+
+
+
+  #pjContainer {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    #vistaPJ {
+      width: 390px;
+      height: 350px;
+      padding: 70px 40px 40px 40px;
+      box-sizing: border-box;
+      background-image: url("../img/ui/modules/view-pj/bg.png");
+      background-size: cover;
+      background-position: center;
+      margin-right: 20px;
+      text-align: center;
+    }
+
+    #inventario {
+      width: 595px;
+      height: 350px;
+      padding: 40px 55px 40px 55px;
+      box-sizing: border-box;
+      background-image: url("../img/ui/modules/item-inventary/bg.png");
+      background-size: cover;
+      background-position: center;
+
+      .inv {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+
+        li {
+          flex: 1;
+          flex-basis: 35px;
+          max-width: 35px;
+          margin: 5px 2.5px 2px 2.5px;
+
+          .tooltip-item {
+            display: none;
+          }
+          figure {
+            height:35px;
+            width:35px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 80%;
+              margin: 0 auto;
+            }
+          }
+
+          .options {
+            display: none;
+            position: absolute;
+            background-color: rgba(0,0,0,0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 120px;
+            li {
+              width: 100%;
+              max-width: 100%;
+              button {
+                background-color: transparent;
+                color: white;
+                border:none;
+                cursor: pointer;
+              }
+            }
+            li:hover {
+              background-color: rgba(15,215,0,0.3);
+            }
+          }
+
+          article:hover > .options {
+            display: block;
+          }
+
+          .equip {
+            border: 1px solid green;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+}
+
